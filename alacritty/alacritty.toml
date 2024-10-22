@@ -1,0 +1,12 @@
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[window]
+opacity=0.9
+#decorations_theme_variant = "Dark"
+
+[font]
+normal = { family = "0xProto Nerd Font", style = "Regular" }
+
+[colors.primary]
+background = "#000000"
