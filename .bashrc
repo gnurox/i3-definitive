@@ -5,15 +5,15 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+alias ls='lsd --color=auto'
 alias grep='grep --color=auto'
 alias p='sudo pacman'
 alias s='source ~/.bashrc && source ~/.bash_profile'
 alias config='vim ~/.config/i3/config'
 alias vencord='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
 alias shn='shutdown now'
-alias key='sudo pacman -Sy archlinux-keyring'
 alias trace='redive'
+alias key='sudo pacman -Sy archlinux-keyring --noconfirm'
 alias up='key && p -Syyu'
 #PS1='[\u@\h \W]\$ '
 
