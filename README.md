@@ -6,3 +6,10 @@
 
 
 Functional setup, it consists of everything a user might need.
+
+
+```sh
+git clone https://github.com/Grxpe12/i3-definitive.git
+cd i3-definitive
+sudo ./install.sh
+```
