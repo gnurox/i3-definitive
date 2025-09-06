@@ -1,9 +1,17 @@
+
+let mapleader = " "
+
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
+Plug 'ap/vim-css-color'
+Plug 'preservim/nerdtree'
 call plug#end()
+
+" Using system clipboard under Wayland
+xnoremap <silent> <leader>c :w !wl-copy<CR><CR>
 
 filetype off
 filetype plugin indent on
@@ -17,6 +25,7 @@ set encoding=utf-8
 set tabstop=2
 set laststatus=2
 set statusline+=%F
+set clipboard=unnamedplus
 set number
 set ignorecase
 set hlsearch
@@ -31,4 +40,3 @@ set hidden
 set ttyfast
 set showmode
 set showcmd
-
