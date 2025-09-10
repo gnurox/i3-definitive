@@ -18,5 +18,4 @@ alias synctime='sudo timedatectl set-ntp true'
 
 PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[38;5;108m\]\u\[\e[0m\] at \[\e[38;5;32m\]\w\[\e[0m\] \[\e[38;5;100m\]${PS1_CMD1}\n\[\e[38;5;108m\]\\$\[\e[0m\] '
 
-#PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null); if [ -n "$PS1_CMD1" ]; then PS1_CMD1=" : $PS1_CMD1"; fi';
-#PS1='\[\e[38;5;72m\][\[\e[38;5;46;1m\]\u\[\e[0;38;5;72m\]][\[\e[38;5;28m\]\H\[\e[38;5;72m\]][\[\e[38;5;28m\]\w\[\e[0m\]\[\e[38;5;25m\]${PS1_CMD1}\[\e[38;5;72m\]]\n\[\e[38;5;72m\]\\$\[\e[0m\] '
+export QT_QPA_PLATFORMTHEME=qt5ct
