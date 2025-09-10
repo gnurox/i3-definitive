@@ -14,10 +14,7 @@ font pango:noto sans medium 11
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
-exec --no-startup-id gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-exec --no-startup-id gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
-exec --no-startup-id gsettings set org.gnome.desktop.interface font-name 'Noto Sans Medium 11'
-exec --no-startup-id gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+exec --no-startup-id gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark' && gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -41,7 +38,7 @@ exec --no-startup-id nitrogen --restore
 #exec --no-startup-id picom
 
 # Screenshotter app
-bindsym $mod+Shift+s exec --no-startup-id xfce4-screenshooter
+bindsym $mod+Shift+s exec --no-startup-id ksnip --rectarea
 
 # Clipboard history
 exec --no-startup-id xfce4-clipman
@@ -235,6 +232,7 @@ for_window [class="Xfce4-taskmanager"]                  floating enable
 for_window [class="Arandr"]                             floating enable
 for_window [class="obs"]                                floating enable
 for_window [class="vlc"]                                floating enable
+for_window [class="ksnip"]                              floating enable
 
 #gaps outer 5
 #gaps inner 5
