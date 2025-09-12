@@ -1,50 +1,45 @@
-# Pulseaudio
+# Start Pulseaudio daemon
 exec --no-startup-id pulseaudio -D 
+
+# Start NetworkManager
+exec --no-startup-id nm-applet
 
 # start notification daemon
 exec --no-startup-id dunst 
 
+# Daemonize intel-undervolt
+exec --no-startup-id intel-undervolt daemon
+
+# set SUPER as $mod
 set $mod Mod4
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
+# Font
 font pango:noto sans medium 11
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
+# Dark mode
 exec --no-startup-id gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark' && gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
-# Start XDG autostart .desktop files using dex. See also
-# https://wiki.archlinux.org/index.php/XDG_Autostart
+# DO NOT TOUCH 
 exec --no-startup-id dex --autostart --environment i3
-
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
-# Wallaperp
+# Wallpaper
 exec --no-startup-id nitrogen --restore
 
 # Compositor
 #exec --no-startup-id picom
 
+# Clipboard history manager
+exec --no-startup-id xfce4-clipman
+
+# Blueman (bluetooth)
+exec --no-startup-id blueman-applet
+
 # Screenshotter app
 bindsym $mod+Shift+s exec --no-startup-id ksnip --rectarea
 
-# Clipboard history
-exec --no-startup-id xfce4-clipman
-
-# Blueman
-exec --no-startup-id blueman-applet
+# Show clipboard history
+bindsym $mod+v exec --no-startup-id xfce4-popup-clipman
 
 # Firefox shortcut
 bindsym $mod+b exec --no-startup-id firefox
@@ -112,7 +107,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+g split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -233,6 +228,8 @@ for_window [class="Arandr"]                             floating enable
 for_window [class="obs"]                                floating enable
 for_window [class="vlc"]                                floating enable
 for_window [class="ksnip"]                              floating enable
+for_window [class="Eog"]                                floating enable
+for_window [class="Nwg-look"]                           floating enable
 
 #gaps outer 5
 #gaps inner 5
