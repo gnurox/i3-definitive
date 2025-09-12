@@ -13,6 +13,8 @@ call plug#end()
 " Using system clipboard under Wayland
 xnoremap <silent> <leader>c :w !wl-copy<CR><CR>
 
+nnoremap <C-t> :NERDTreeToggle<CR>
+
 filetype off
 filetype plugin indent on
 syntax on
