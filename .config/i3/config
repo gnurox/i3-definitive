@@ -35,6 +35,9 @@ exec --no-startup-id xfce4-clipman
 # Blueman (bluetooth)
 exec --no-startup-id blueman-applet
 
+# Thunar
+bindsym $mod+f exec --no-startup-id thunar
+
 # Screenshotter app
 bindsym $mod+Shift+s exec --no-startup-id ksnip --rectarea
 
@@ -110,7 +113,7 @@ bindsym $mod+h split h
 bindsym $mod+g split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
