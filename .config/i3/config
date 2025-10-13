@@ -8,7 +8,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id dunst 
 
 # Daemonize intel-undervolt
-exec --no-startup-id intel-undervolt daemon
+exec --no-startup-id sudo intel-undervolt daemon
 
 # set SUPER as $mod
 set $mod Mod4
@@ -39,7 +39,8 @@ exec --no-startup-id blueman-applet
 bindsym $mod+f exec --no-startup-id thunar
 
 # Screenshotter app
-bindsym $mod+Shift+s exec --no-startup-id ksnip --rectarea
+exec --no-startup-id flameshot
+bindsym $mod+Shift+s exec --no-startup-id flameshot gui
 
 # Show clipboard history
 bindsym $mod+v exec --no-startup-id xfce4-popup-clipman
