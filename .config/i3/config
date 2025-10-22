@@ -27,7 +27,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nitrogen --restore
 
 # Compositor
-#exec --no-startup-id picom
+exec --no-startup-id picom
 
 # Clipboard history manager
 exec --no-startup-id xfce4-clipman
@@ -234,6 +234,7 @@ for_window [class="vlc"]                                floating enable
 for_window [class="ksnip"]                              floating enable
 for_window [class="Eog"]                                floating enable
 for_window [class="Nwg-look"]                           floating enable
+for_window [class="pavucontrol"]                           floating enable
 
 #gaps outer 5
 #gaps inner 5
