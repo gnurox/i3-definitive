@@ -2,9 +2,6 @@
 let mapleader = " "
 
 call plug#begin('~/.vim/plugged')
-Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
 Plug 'preservim/nerdtree'
@@ -42,3 +39,4 @@ set hidden
 set ttyfast
 set showmode
 set showcmd
+colorscheme retrobox
