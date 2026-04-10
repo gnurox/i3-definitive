@@ -1,0 +1,45 @@
+# separator
+separator=true
+separator_block_width=10
+
+# 1. Volume
+[volume]
+command=~/.config/i3blocks/scripts/volume.sh
+interval=once
+signal=10
+
+# 2. Brightness
+[brightness]
+command=~/.config/i3blocks/scripts/brightness.sh
+interval=once
+signal=5
+
+# 3. Network (SSID + IP)
+[network]
+command=~/.config/i3blocks/scripts/network.sh
+interval=5
+
+# 4. CPU Usage
+[cpu]
+command=~/.config/i3blocks/scripts/cpu.sh
+interval=2
+
+# 5. CPU Temp
+[temp]
+command=~/.config/i3blocks/scripts/temp.sh
+interval=5
+
+# 6. RAM
+[ram]
+command=~/.config/i3blocks/scripts/ram.sh
+interval=5
+
+# 7. Battery
+[battery]
+command=~/.config/i3blocks/scripts/battery.sh
+interval=30
+
+# 8. Date & Time
+[time]
+command=date '+%d/%m/%Y %H:%M:%S'
+interval=1
