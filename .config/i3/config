@@ -236,7 +236,8 @@ for_window [class="vlc"]                                floating enable
 for_window [class="ksnip"]                              floating enable
 for_window [class="Eog"]                                floating enable
 for_window [class="Nwg-look"]                           floating enable
-for_window [class="pavucontrol"]                           floating enable
+for_window [class="pavucontrol"]                        floating enable
+for_window [class="baobab"]                             floating enable
 
 #gaps outer 5
 #gaps inner 5
